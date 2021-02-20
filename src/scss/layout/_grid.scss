@@ -9,9 +9,12 @@
     }
 
     .item {
-        a {
+        div {
             position: relative;
             background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             
             span {
                 position: absolute;
@@ -26,9 +29,25 @@
                 text-transform: uppercase;
             }
 
+            .button-buy {
+                display: none;
+            }
+
             &:hover {
                 box-shadow: 0 0 10px 0 rgba(50,50,50,.3);
+            }
+
+            &:hover > .button-buy {
                 cursor: pointer;
+                z-index: 1000;
+                display: inline-block;
+                background-color: $red;
+                padding: 1rem;
+                border: none;
+                border-radius: 2rem;
+                color: $white;
+                font-weight: 600;
+                text-transform: uppercase;
             }
 
             &:after {
@@ -64,7 +83,7 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
 
-        a {
+        div {
             height: 20rem;
             background-position: top center;
             
@@ -89,10 +108,9 @@
     .item-2 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        
         gap: 1rem;
 
-        a {
+        div {
             height: 30rem;
             background-position: center center;
             
@@ -113,7 +131,7 @@
     .item-3 {
         display: grid;
 
-        a {
+        div {
             height: 40rem;
             background-image: url('/build/img/4.jpg');
             background-position: top center;
@@ -130,7 +148,7 @@
         grid-template-rows: repeat(2, 1fr);
         gap: 1rem;
 
-        a {
+        div {
             height: 20rem;
 
             &:first-child {
