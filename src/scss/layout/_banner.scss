@@ -1,0 +1,131 @@
+.banner {
+    position: relative;
+    background: #889ec4;
+    overflow: hidden;
+
+    height: auto;
+
+    &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.6;
+        width: 100%;
+        background-image: url('/build/img/personas.jpeg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .banner-info {
+        z-index: 100;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        text-align: center;
+
+        h1 {
+            position: relative;
+            font-size: 5rem;
+            text-transform: uppercase;
+
+            span {
+                position: relative;
+                color: $white;
+
+                &::after {
+                    position: absolute;
+                    top: 45px;
+                    right: -19px;
+                    content: 'Sale';
+                    height: 5rem;
+                    width: 5rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                    background-color: $yellow;
+                    border-radius: 50%;
+                    color: $black;
+                }
+            }
+        }
+
+        p, span, h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: $white;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .banner-sale {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            line-height: 1;
+            font-size: 2.2rem;
+            color: $white;
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+        }
+
+        .banner-discount {
+            text-align: center;
+            font-size: 8rem;
+            font-weight: 800;
+            color: $yellow;
+        }
+
+        .banner-link,
+        .banner-text {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            color: $white;
+            margin-bottom: 1.5rem;
+        }
+
+        .banner-link {
+            background-color: rgba(0, 0, 0, 0.507);
+            padding: 1rem 2rem;
+        }
+
+        .tyc {
+            padding-top: 6rem;
+            font-size: 1.4rem;
+            color: $white;
+            text-align: center;
+        }
+    }
+}
+
+.banner-gif {
+    z-index: 100;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    @include tablet() {
+        width: 15rem;
+        height: 15rem;
+        top: 1rem;
+        right: 2rem;
+    }
+
+    img {
+        height: 100%;
+        border-radius: 50%;
+    }
+}
